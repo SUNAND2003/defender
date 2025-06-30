@@ -134,8 +134,8 @@ padding-top: 0px;
 
 .hero-text {
     position: absolute;
-    top: 450px;
-    left: 30%;
+    top: 60%;
+    left: 35%;
     transform: translateX(-50%);
     color: white;
     text-align: center;

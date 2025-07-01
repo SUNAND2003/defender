@@ -325,6 +325,7 @@ h3 {
     height: auto;
     object-fit: cover;
     margin-bottom: 30px;
+    
 }
 
 .section-inner p {
@@ -343,6 +344,7 @@ footer .container {
   display: flex;
   justify-content: center;
   align-items: center;
+  
 }
 
 .footer-form {
@@ -403,7 +405,9 @@ footer .container {
 .footer-column h4,
 .footer-column2 h4 {
   margin-bottom: 15px;
+  padding-top: 30px;
   color: #06a92a;
+
 }
 
 .footer-column ul {

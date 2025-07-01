@@ -386,13 +386,11 @@ footer .container {
     margin: 0 auto;
 }
 
-.footer-column{
-
-}
+.footer-column
 .footer-column2 {
     flex: 1 1 250px;
     margin-bottom: 20px;
-    margin-left: 400px;
+    margin-left: 200px;
 
 }
 
@@ -435,7 +433,7 @@ footer .container {
     text-align: end;
     margin: 10px 150px;
     position: relative;
-    bottom: 160px;
+    
 }
 
 .social-icons a {

@@ -332,119 +332,113 @@ h3 {
     font-size: large;
 }
 
-/* Footer */
+/* --- Footer Styling --- */
 footer {
-    background-color: #000;
-    padding: 40px 20px;
+  background-color: #000;
+  padding: 30px 20px 10px;
+  color: #fff;
 }
 
 footer .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .footer-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-    width: 100%;
-    max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 20px;
 }
 
 .footer-form input,
 .footer-form textarea {
-    padding: 12px;
-    width: 100%;
-    border: none;
-    border-radius: 5px;
-    background-color: #222;
-    color: #fff;
+  padding: 12px;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  background-color: #222;
+  color: #fff;
+  font-size: 1rem;
 }
 
 .footer-form input[type="submit"] {
-    background-color: #28a745;
-    color: #fff;
-    font-weight: bold;
-    cursor: pointer;
+  background-color: #28a745;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-/* Main Footer */
+.footer-form input[type="submit"]:hover {
+  background-color: #218838;
+}
+
 .footer {
-    background-color: #110f0f;
-    color: #fff;
-    padding: 40px 20px 20px;
-    font-family: 'Montserrat', sans-serif;
+  background-color: #110f0f;
+  color: #fff;
+  padding: 30px 20px 10px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .footer-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 20px;
 }
 
-.footer-column
+.footer-column,
 .footer-column2 {
-    flex: 1 1 250px;
-    margin-bottom: 20px;
-    margin-left: 200px;
-
+  flex: 1 1 250px;
+  margin-bottom: 10px;
 }
 
 .footer-column h4,
 .footer-column2 h4 {
-    margin-bottom: 15px;
-    color: #06a92a;
+  margin-bottom: 15px;
+  color: #06a92a;
 }
 
 .footer-column ul {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
 .footer-column ul li {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .footer-column ul li a {
-    color: #fff;
-    text-decoration: none;
-    transition: 0.3s;
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
 }
 
 .footer-column ul li a:hover {
-    color: #1bdddd;
+  color: #1bdddd;
 }
 
-.footer-bottom {
-    text-align: center;
-    border-top: 1px solid #353232;
-    padding-top: 15px;
-    margin-top: 20px;
-    font-size: 14px;
-    color: #7a7878;
-}
-
-/* Icons */
 .social-icons {
-    text-align: end;
-    margin: 10px 150px;
-    position: relative;
-    
+  text-align: center;
+  margin: 10px 0;
 }
 
 .social-icons a {
-    display: inline-block;
-    margin: 0 10px;
-    font-size: 30px;
-    transition: transform 0.3s;
+  display: inline-block;
+  margin: 0 10px;
+  font-size: 30px;
+  transition: transform 0.3s;
 }
 
 .social-icons a:hover {
-    transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 .social-icons .fa-facebook { color: #1877F2; }
@@ -452,61 +446,37 @@ footer .container {
 .social-icons .fa-youtube { color: #FF0000; }
 .social-icons .fa-instagram { color: #c5406d; }
 
-/* 🔻 MOBILE RESPONSIVE FIXES */
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #353232;
+  padding-top: 10px;
+  font-size: 14px;
+  color: #7a7878;
+  margin-top: 10px;
+}
+
+/* --- Mobile Footer Adjustments --- */
 @media (max-width: 768px) {
-    .hero-text h1 {
-        font-size: 2rem;
-    }
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+  }
 
-    .hero-button {
-        font-size: 0.9rem;
-        padding: 10px 16px;
-    }
+  .footer-column,
+  .footer-column2 {
+    text-align: center;
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
 
-    h2 {
-        font-size: 26px;
-        text-align: center;
-    }
+  .social-icons {
+    margin: 10px 0;
+  }
 
-    h3 {
-        font-size: 20px;
-        text-align: center;
-    }
-
-    .section-inner p {
-        font-size: 1rem;
-        text-align: justify;
-    }
-
-    .octa-showcase {
-        padding: 30px 20px;
-    }
-
-    .octa-left h2 {
-        font-size: 2rem;
-    }
-
-    .octa-left p {
-        font-size: 1rem;
-    }
-
-    .octa-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .footer-form input,
-    .footer-form textarea {
-        font-size: 1rem;
-    }
-
-    .footer-container {
-        flex-direction: column;
-        gap: 30px;
-    }
-
-    .footer-column,
-    .footer-column2 {
-        text-align: center;
-    }
+  .footer-bottom {
+    margin-top: 10px;
+    padding-top: 10px;
+  }
 }

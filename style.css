@@ -283,7 +283,7 @@ h3 {
     flex: 1.5;
     display: flex;
     justify-content: center;
-        padding-right: 10px;
+        padding-right: 0px;
 
 }
 
@@ -297,7 +297,7 @@ h3 {
 }
 
 .octa-grid img {
-    width: 100%;
+    width: 130%;
     border-radius: 12px;
     object-fit: cover;
     

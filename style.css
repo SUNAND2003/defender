@@ -200,20 +200,31 @@ h2 {
     margin-bottom: 10px;
 }
 
+/* ----- Swipeable Gallery (ADDED) ----- */
 .model-gallery {
     display: flex;
     gap: 10px;
     overflow-x: auto;
-    margin-bottom: 10px;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 10px;
+    padding-left: 10px;
 }
 
 .model-gallery img {
-    width: 100%;
-    max-width: 100%;
+    scroll-snap-align: start;
+    flex: 0 0 auto;
+    width: 80%;
+    max-width: 300px;
     border-radius: 10px;
-    flex-shrink: 0;
     object-fit: cover;
 }
+
+.model-gallery::-webkit-scrollbar {
+    display: none;
+}
+/* ----- End Swipeable Gallery ----- */
 
 h3 {
     margin-bottom: 20px;
@@ -221,15 +232,6 @@ h3 {
     font-size: 25px;
     color: #eee7e7;
 }
-
-
-
-
-
-
-
-
-
 
 /* Octa Section */
 .octa-showcase {
@@ -249,7 +251,6 @@ h3 {
     text-align: center;
     padding-left: 57px;
     padding-right: 40px;
-    
 }
 
 .octa-left h2 {
@@ -283,8 +284,7 @@ h3 {
     flex: 1.5;
     display: flex;
     justify-content: center;
-        padding-right: 0px;
-
+    padding-right: 0px;
 }
 
 .octa-grid {
@@ -292,17 +292,13 @@ h3 {
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
     max-width: 600px;
-    
-    
 }
 
 .octa-grid img {
-    width: 130%;
+    width: 100%;
     border-radius: 12px;
     object-fit: cover;
-    
 }
-
 
 /* Feedback Section */
 .feedback-section {
@@ -352,149 +348,243 @@ h3 {
 
 /* --- Footer Styling --- */
 footer {
-  background-color: #000;
-  padding: 30px 20px 10px;
-  color: #fff;
+    background-color: #000;
+    padding: 30px 20px 10px;
+    color: #fff;
 }
 
 footer .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .footer-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
-  width: 100%;
-  max-width: 500px;
-  margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 20px;
 }
 
 .footer-form input,
 .footer-form textarea {
-  padding: 12px;
-  width: 100%;
-  border: none;
-  border-radius: 5px;
-  background-color: #222;
-  color: #fff;
-  font-size: 1rem;
+    padding: 12px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    background-color: #222;
+    color: #fff;
+    font-size: 1rem;
 }
 
 .footer-form input[type="submit"] {
-  background-color: #28a745;
-  color: #fff;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s;
+    background-color: #28a745;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 .footer-form input[type="submit"]:hover {
-  background-color: #218838;
+    background-color: #218838;
 }
 
 .footer {
-  background-color: #110f0f;
-  color: #fff;
-  padding: 30px 20px 10px;
-  font-family: 'Montserrat', sans-serif;
+    background-color: #110f0f;
+    color: #fff;
+    padding: 30px 20px 10px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .footer-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  max-width: 1200px;
-  margin: 0 auto;
-  gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
 }
 
 .footer-column,
 .footer-column2 {
-  flex: 1 1 250px;
-  margin-bottom: 10px;
+    flex: 1 1 250px;
+    margin-bottom: 10px;
 }
 
 .footer-column h4,
 .footer-column2 h4 {
-  margin-bottom: 15px;
-  color: #06a92a;
+    margin-bottom: 15px;
+    color: #06a92a;
 }
 
 .footer-column ul {
-  list-style: none;
-  padding: 0;
+    list-style: none;
+    padding: 0;
 }
 
 .footer-column ul li {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 .footer-column ul li a {
-  color: #fff;
-  text-decoration: none;
-  transition: 0.3s;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
 }
 
 .footer-column ul li a:hover {
-  color: #1bdddd;
+    color: #1bdddd;
 }
 
 .social-icons {
-  text-align: center;
-  margin: 10px 0;
+    text-align: center;
+    margin: 10px 0;
 }
 
 .social-icons a {
-  display: inline-block;
-  margin: 0 10px;
-  font-size: 30px;
-  transition: transform 0.3s;
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 30px;
+    transition: transform 0.3s;
 }
 
 .social-icons a:hover {
-  transform: scale(1.2);
+    transform: scale(1.2);
 }
 
 .social-icons .fa-facebook { color: #1877F2; }
-.social-icons .fa-x-twitter { color: #200ebc; }
+.social-icons .fa-x-twitter { color: #0ebc1f; }
 .social-icons .fa-youtube { color: #FF0000; }
 .social-icons .fa-instagram { color: #c5406d; }
 
 .footer-bottom {
-  text-align: center;
-  border-top: 1px solid #353232;
-  padding-top: 10px;
-  font-size: 14px;
-  color: #7a7878;
-  margin-top: 10px;
+    text-align: center;
+    border-top: 1px solid #353232;
+    padding-top: 10px;
+    font-size: 14px;
+    color: #7a7878;
+    margin-top: 10px; 
 }
 
-/* --- Mobile Footer Adjustments --- */
+/* --- Mobile Dimension Responsive Block --- */
 @media (max-width: 768px) {
-  .footer-container {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    padding: 10px 0;
-  }
+    h1, h2, h3 {
+        font-size: clamp(1.5rem, 4.5vw, 1.8rem);
+        text-align: center;
+    }
 
-  .footer-column,
-  .footer-column2 {
-    text-align: center;
-    margin-left: 0;
-    margin-bottom: 10px;
-  }
+    .hero-text h1 {
+        font-size: clamp(1.8rem, 5vw, 2.2rem);
+        padding: 2 10px;
+    }
 
-  .social-icons {
-    margin: 10px 0;
-  }
+    .hero-button {
+        font-size: clamp(0.9rem, 4vw, 1rem);
+        padding: 10px 18px;
+    }
 
-  .footer-bottom {
-    margin-top: 10px;
-    padding-top: 10px;
-  }
+    .section-inner {
+        padding: 0 10px;
+    }
+
+    .models {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0 10px;
+    }
+
+    .model-card img {
+        height: 200px;
+    }
+
+    .model-gallery {
+        flex-direction: row;
+        gap: 10px;
+        padding-bottom: 15px;
+    }
+
+    .octa-showcase {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 60px 50px;
+        gap: 0px;
+        background-color: #000;
+        color: #fff;
+    }
+
+    .octa-left {
+        padding: 0 10px;
+        text-align: center;
+    }
+
+    .octa-left h2 {
+        font-size: 1.7rem;
+        letter-spacing: 1px;
+        padding-bottom: 0px;
+    }
+
+    .octa-left p {
+        font-size: 1rem;
+        color: #ccc;
+        margin-bottom: 30px;
+    }
+
+    .octa-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0 10px;
+    }
+
+    .octa-grid img {
+        width: 100%;
+        height: auto;
+    }
+
+    .feedback-section h2 {
+        font-size: clamp(1.6rem, 4.5vw, 2rem);
+    }
+
+    .feedback-card {
+        padding: 15px;
+    }
+
+    .footer-form {
+        padding: 0 10px;
+    }
+
+    .footer-column,
+    .footer-column2 {
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-column h4,
+    .footer-column2 h4 {
+        font-size: clamp(1rem, 2.5vw, 1.2rem);
+    }
+
+    .footer-column ul li a {
+        font-size: clamp(0.9rem, 2vw, 1rem);
+    }
+
+    .footer-bottom {
+        font-size: 0.9rem;
+        margin-top: 10px;
+        padding-top: 10px;
+    }
+
+    .footer-form input,
+    .footer-form textarea {
+        font-size: clamp(0.95rem, 2.5vw, 1rem);
+        padding: 10px;
+    }
+
+    .feedback-rating {
+        font-size: 1rem;
+    }
 }
